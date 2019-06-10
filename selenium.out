@@ -1,0 +1,8 @@
+2019-06-10 14:21:36 INFO  LoggerTest:27 - log.test1
+2019-06-10 14:21:36 INFO  LoggerTest:28 - log test2
+2019-06-10 14:21:36 INFO  LoggerTest:29 - Browser Closed
+2019-06-10 14:21:36 INFO  LoggerTest:30 - Invalid browser
+2019-06-10 14:25:27 INFO  LoggerTest:27 - log.test1
+2019-06-10 14:25:27 INFO  LoggerTest:28 - log test2
+2019-06-10 14:25:27 INFO  LoggerTest:29 - Browser Closed
+2019-06-10 14:25:27 ERROR LoggerTest:30 - Invalid browser
