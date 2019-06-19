@@ -3,12 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="practicemaven.TestNGPractice.AssertionsINTestNG">
+      <class name="extentReport.ExtentReport">
         <methods>
+          <include name="beforeClass"/>
+          <include name="Afterclass"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
           <include name="test2"/>
-          <include name="test3"/>
         </methods>
-      </class> <!-- practicemaven.TestNGPractice.AssertionsINTestNG -->
+      </class> <!-- extentReport.ExtentReport -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

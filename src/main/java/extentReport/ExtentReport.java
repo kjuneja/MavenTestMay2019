@@ -2,6 +2,7 @@ package extentReport;
 
 import java.lang.reflect.Method;
 
+import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -38,22 +39,29 @@ public class ExtentReport {
 	      
 	       @BeforeMethod
 	       public void beforeMethod(Method result) {
-	              extentTest.log(Status.INFO, result.getName()+"Started..");
+	              extentTest.log(Status.PASS, result.getName()+"Started..");
 	             
 	       }
 	      
 	       @Test
 	       public void test1() {
 	             
-	              extentTest.log(Status.INFO, "test 1 started");
-	              extentTest.log(Status.INFO, "test 1 started");
+	              extentTest.log(Status.INFO, "test 1 in progress");
+	              extentTest.log(Status.PASS, "test 1 about to end");
 	       }
 	      
 	       @Test
 	       public void test2() {
-	              extentTest.log(Status.INFO, "test 2 started");
-	              extentTest.log(Status.INFO, "test 2 started");
+	              extentTest.log(Status.INFO, "test 2 in progress");
+	             // Assert.assertTrue(false);
+	              extentTest.log(Status.PASS, "test 2 about to end");
 	       }
+	       @Test(enabled = false)
+	       public void test3() {
+	              extentTest.log(Status.SKIP, "test 3 in progress");
+	              extentTest.log(Status.SKIP, "test 3 about to end");
+	       }
+	       
 	      
 	       @AfterMethod
 	       public void afterMethod(ITestResult result) {
